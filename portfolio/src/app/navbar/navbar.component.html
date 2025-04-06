@@ -1,0 +1,35 @@
+<nav class="w-full flex items-center justify-between px-4 py-2 sm:py-0">
+  <!-- Left side -->
+  <div>
+    <h1 class="text-xl font-semibold">Hakeem Dimozantos</h1>
+  </div>
+
+  <!-- Right side -->
+  <div class="sm:flex items-center">
+    <app-nav-items class="hidden sm:block" />
+    <!-- Dropdown btn -->
+    <div class="sm:hidden relative dropdown dropdown-end">
+      <div tabindex="0" role="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+          />
+        </svg>
+      </div>
+      <div
+        class="dropdown-content menu bg-base-100 rounded-box z-1 w-32 p-2 shadow-sm"
+      >
+        <app-nav-items />
+      </div>
+    </div>
+  </div>
+</nav>
