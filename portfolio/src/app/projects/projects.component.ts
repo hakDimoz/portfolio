@@ -15,7 +15,7 @@ export class ProjectsComponent {
       live: 'https://fluentdigits.com',
       gitLink: 'https://github.com/hakDimoz/fluentDigits',
       technology: [
-        { name: 'Angular', icon: 'assets/angular-icon.png' },
+        { name: 'Angular', icon: 'technology/angular.svg' },
         { name: 'TypeScript', icon: 'assets/typescript-icon.png' },
       ],
     },
