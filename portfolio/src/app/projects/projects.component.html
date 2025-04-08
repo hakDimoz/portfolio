@@ -1,5 +1,9 @@
 <section id="projects" class="px-4">
   <h1 class="text-lg font-semibold">Projects</h1>
-    
-  <app-project-card [project]="projects[0]"/>
+
+  <div class="flex flex-col gap-8 mt-4">
+    @for (project of projects; track $index) {
+    <app-project-card [project]="project" />
+    }
+  </div>
 </section>

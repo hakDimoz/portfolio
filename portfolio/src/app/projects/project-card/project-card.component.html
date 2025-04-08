@@ -1,23 +1,29 @@
-<div class="flex flex-col border gap-2">
-  <img [src]="project().image" alt="{{ project().title }}" />
-
-  <!-- Title & description -->
-  <div>
-    <h2 class="font-semibold">{{ project().title }}</h2>
-    <p class="opacity-80">{{ project().description }}</p>
+<div class="flex flex-col gap-2 sm:flex-row">
+  <div class="flex gap-2 ">
+    <img [src]="project().image" alt="{{ project().title }}" class="sm:w-24" />
+    <!-- Title & description -->
+    <div>
+      <h2 class="font-semibold">{{ project().title }}</h2>
+      <p class="opacity-80">{{ project().description }}</p>
+    </div>
   </div>
+
   <div class="flex flex-col gap-2">
     <!-- Techologies used -->
     <div class="flex flex-wrap gap-2">
       @for (technology of project().technology; track $index) {
-      <img [src]="technology.icon" [alt]="technology.name" />
+      <img [src]="technology.icon" [alt]="technology.name" class="size-4" />
       <p class="hidden">{{ technology.name }}</p>
       }
     </div>
     <!-- Links -->
     <div class="space-x-2">
-      <a href="" class="link link-hover link-primary">Github></a>
-      <a href="" class="link link-hover link-primary">View live ></a>
-    </div> 
+      <a [href]="project().gitLink" class="link link-hover link-primary"
+        >Github ></a
+      >
+      @if (project().live) {
+      <a [href]="project().live" class="link link-hover link-primary">Live ></a>
+      }
+    </div>
   </div>
 </div>
